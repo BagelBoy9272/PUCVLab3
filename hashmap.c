@@ -87,12 +87,14 @@ void insertMap(HashMap * map, char * key, void * value) {
 Pair * searchMap(HashMap * map,  char * key) {   
     long hashKey = hash(key, map->capacity);
 
-    while (is_equal(map->buckets[hashKey]->key, key) == 0) { // loop mientras la llave sea diferente 
-        if (map->buckets[hashKey] == NULL || map->buckets[hashKey]->key == NULL) return NULL;
+    while (map->buckets[hashKey] != NULL && map->buckets[hashKey]->key != NULL) {
+        if (is_equal(map->buckets[hashKey]->key, key)) {
+            return map->buckets[hashKey];
+            map->current = hashKey;
+        }
         hashKey = (hashKey + 1) % (map->capacity);
     }
-    map->current = hashKey;
-    return map->buckets[hashKey];
+    return NULL;
 }
 
 // 4. Implemente la función void eraseMap(HashMap * map, char * key). 
