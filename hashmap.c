@@ -87,9 +87,9 @@ void insertMap(HashMap * map, char * key, void * value) {
 Pair * searchMap(HashMap * map,  char * key) {   
     long hashKey = hash(key, map->capacity);
 
-    while (is_equal(map->buckets[hashKey]->key, key)) { // loop mientras la llave sea diferente
-        hashKey = (hashKey + 1) % (map->capacity);
+    while (is_equal(map->buckets[hashKey]->key, key) == 0) { // loop mientras la llave sea diferente 
         if (map->buckets[hashKey] == NULL) return NULL;
+        hashKey = (hashKey + 1) % (map->capacity);
     }
     map->current = hashKey;
     return map->buckets[hashKey];
