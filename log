@@ -2,3 +2,25 @@ Thu Apr 16 07:55:51 PM UTC 2026:
  tests:  0|7
 total_score: 0/60
 b59d9e3
+Thu Apr 16 08:08:48 PM UTC 2026: 
+ hashmap.c | 14 +++++++++++++-
+ 1 file changed, 13 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:62:5: error: ‘hashKey’ undeclared (first use in this function); did you mean ‘hash’?
+   62 |     hashKey = hash(key, map->capacity);
+      |     ^~~~~~~
+      |     hash
+hashmap.c:62:5: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:65:5: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+   65 |     if (map->buckets[hashKey] == NULL || map->buckets[hashKey]->key == NULL)
+      |     ^~
+hashmap.c:67:9: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   67 |         (map->size)++;
+      |         ^
+hashmap.c:68:5: error: ‘else’ without a previous ‘if’
+   68 |     else {
+      |     ^~~~
+cc1: all warnings being treated as errors
+8aa305d
