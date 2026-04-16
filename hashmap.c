@@ -85,9 +85,14 @@ void insertMap(HashMap * map, char * key, void * value) {
 // Recuerde actualizar el índice current a la posición encontrada. Recuerde que el arreglo es circular.
 
 Pair * searchMap(HashMap * map,  char * key) {   
-    //hashKey = hash()
+    long hashKey = hash(key, map->capacity);
 
-    return NULL;
+    while (is_equal(map->buckets[hashKey]->key, key)) { // loop mientras la llave sea diferente
+        hashKey = (hashKey + 1) % (map->capacity);
+        if (map->buckets[hashKey] == NULL) return;
+    }
+    map->current = hashKey;
+    return map->buckets[hashKey];
 }
 
 // 4. Implemente la función void eraseMap(HashMap * map, char * key). 

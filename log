@@ -206,3 +206,16 @@ Thu Apr 16 08:36:00 PM UTC 2026:
  tests:  5|4
 total_score: 20/60
 4215c63
+Thu Apr 16 08:41:36 PM UTC 2026: 
+ hashmap.c | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:92:44: error: ‘return’ with no value, in function returning non-void [-Wreturn-mismatch]
+   92 |         if (map->buckets[hashKey] == NULL) return;
+      |                                            ^~~~~~
+hashmap.c:87:8: note: declared here
+   87 | Pair * searchMap(HashMap * map,  char * key) {
+      |        ^~~~~~~~~
+3a2c30e
