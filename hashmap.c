@@ -48,10 +48,10 @@ HashMap * createMap(long capacity) {
     HashMap * newMap = (HashMap *)malloc(sizeof(HashMap));
     if (newMap == NULL) return NULL;
 
-    newMap->buckets = (Pair **)calloc(5, sizeof(Pair *));
+    newMap->buckets = (Pair **)calloc(10, sizeof(Pair *));
 
     newMap->size = 0;
-    newMap->capacity = 5;
+    newMap->capacity = 10;
     newMap->current = -1;
     return newMap;
 }
