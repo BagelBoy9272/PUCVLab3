@@ -48,7 +48,7 @@ HashMap * createMap(long capacity) {
     HashMap * newMap = (HashMap *)malloc(sizeof(HashMap));
     if (newMap == NULL) return NULL;
 
-    newMap->buckets = (Pair **)calloc(10, sizeof(Pair *));
+    newMap->buckets = (Pair **)calloc(10, sizeof(Pair *) * 10);
 
     newMap->size = 0;
     newMap->capacity = 10;
@@ -85,7 +85,7 @@ void insertMap(HashMap * map, char * key, void * value) {
 // Recuerde actualizar el índice current a la posición encontrada. Recuerde que el arreglo es circular.
 
 Pair * searchMap(HashMap * map,  char * key) {   
-
+    hashKey = hash()
 
     return NULL;
 }
