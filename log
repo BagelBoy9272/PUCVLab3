@@ -24,3 +24,20 @@ hashmap.c:68:5: error: ‘else’ without a previous ‘if’
       |     ^~~~
 cc1: all warnings being treated as errors
 8aa305d
+Thu Apr 16 08:09:06 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:65:5: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+   65 |     if (map->buckets[hashKey] == NULL || map->buckets[hashKey]->key == NULL)
+      |     ^~
+hashmap.c:67:9: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   67 |         (map->size)++;
+      |         ^
+hashmap.c:68:5: error: ‘else’ without a previous ‘if’
+   68 |     else {
+      |     ^~~~
+cc1: all warnings being treated as errors
+7f53995
