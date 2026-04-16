@@ -106,6 +106,8 @@ Pair * searchMap(HashMap * map,  char * key) {
 void eraseMap(HashMap * map,  char * key) {    
     Pair * foundPair = searchMap(map, key);
 
+    if (foundPair == NULL) return;
+
     foundPair->key = NULL;
     (map->size)--;
 }
