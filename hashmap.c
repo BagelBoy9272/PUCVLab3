@@ -66,6 +66,7 @@ void insertMap(HashMap * map, char * key, void * value) {
         hashKey++;
     }
     map->buckets[hashKey] = par;
+    map->current = hashKey;
     (map->size)++;
 }
 
