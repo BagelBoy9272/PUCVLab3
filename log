@@ -117,3 +117,17 @@ hashmap.c:48:35: note: object of size 0 allocated by ‘calloc’
       |                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~
 cc1: all warnings being treated as errors
 70b7b33
+Thu Apr 16 08:23:26 PM UTC 2026: 
+ hashmap.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘createMap’:
+hashmap.c:51:57: error: expected ‘;’ before ‘newMap’
+   51 |     newMap->buckets = (Pair **)calloc(0, sizeof(Pair *))
+      |                                                         ^
+      |                                                         ;
+   52 | 
+   53 |     newMap->size = 0;
+      |     ~~~~~~                                               
+efa559f
