@@ -104,7 +104,7 @@ Pair * searchMap(HashMap * map,  char * key) {
 // Recuerde actualizar la variable size.
 
 void eraseMap(HashMap * map,  char * key) {    
-    foundPair = searchMap(map, key);
+    Pair * foundPair = searchMap(map, key);
 
     foundPair->key = NULL;
     (map->size)--;
