@@ -88,7 +88,7 @@ Pair * searchMap(HashMap * map,  char * key) {
     long hashKey = hash(key, map->capacity);
 
     while (is_equal(map->buckets[hashKey]->key, key) == 0) { // loop mientras la llave sea diferente 
-        if (map->buckets[hashKey] == NULL) return NULL;
+        if (map->buckets[hashKey] == NULL || map->buckets[hashKey]->key != NULL) return NULL;
         hashKey = (hashKey + 1) % (map->capacity);
     }
     map->current = hashKey;
