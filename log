@@ -253,3 +253,14 @@ Thu Apr 16 08:49:53 PM UTC 2026:
  tests:  8|3
 total_score: 30/60
 032078e
+Thu Apr 16 08:51:21 PM UTC 2026: 
+ hashmap.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:107:5: error: ‘foundPair’ undeclared (first use in this function)
+  107 |     foundPair = searchMap(map, key);
+      |     ^~~~~~~~~
+hashmap.c:107:5: note: each undeclared identifier is reported only once for each function it appears in
+08554a7
