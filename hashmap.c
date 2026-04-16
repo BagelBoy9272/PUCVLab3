@@ -120,7 +120,7 @@ Pair * firstMap(HashMap * map) {
     map->current = 0;
 
     while (map->buckets[map->current] == NULL || map->buckets[map->current]->key == NULL) {
-        (map->current)++;
+        (map->current = (map->current + 1) % map->capacity);
     }
     return map->buckets[map->current];
 }
@@ -129,7 +129,7 @@ Pair * nextMap(HashMap * map) {
     (map->current)++;
     
     while (map->buckets[map->current] == NULL || map->buckets[map->current]->key == NULL) {
-        (map->current)++;
+        (map->current = (map->current + 1) % map->capacity);
     }
     return map->buckets[map->current];
 }
