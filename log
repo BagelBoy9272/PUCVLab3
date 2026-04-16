@@ -91,3 +91,29 @@ Thu Apr 16 08:20:25 PM UTC 2026:
  tests:  4|5
 total_score: 15/60
 dac156f
+Thu Apr 16 08:20:58 PM UTC 2026: 
+ hashmap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘createMap’:
+hashmap.c:51:11: error: array subscript 0 is outside array bounds of ‘HashMap[0]’ {aka ‘struct HashMap[]’} [-Werror=array-bounds=]
+   51 |     newMap->size = 0;
+      |           ^~
+hashmap.c:48:35: note: object of size 0 allocated by ‘calloc’
+   48 |     HashMap * newMap = (HashMap *)calloc(0, sizeof(HashMap));
+      |                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+hashmap.c:52:11: error: array subscript 0 is outside array bounds of ‘HashMap[0]’ {aka ‘struct HashMap[]’} [-Werror=array-bounds=]
+   52 |     newMap->capacity = 0;
+      |           ^~
+hashmap.c:48:35: note: object of size 0 allocated by ‘calloc’
+   48 |     HashMap * newMap = (HashMap *)calloc(0, sizeof(HashMap));
+      |                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+hashmap.c:53:11: error: array subscript 0 is outside array bounds of ‘HashMap[0]’ {aka ‘struct HashMap[]’} [-Werror=array-bounds=]
+   53 |     newMap->current = -1;
+      |           ^~
+hashmap.c:48:35: note: object of size 0 allocated by ‘calloc’
+   48 |     HashMap * newMap = (HashMap *)calloc(0, sizeof(HashMap));
+      |                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+70b7b33
