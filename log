@@ -365,3 +365,12 @@ hashmap.c:160:31: error: statement with no effect [-Werror=unused-value]
       |                             ~~^~~~~~~~~~~~~
 cc1: all warnings being treated as errors
 e61bdac
+Fri Apr 17 12:47:56 AM UTC 2026: 
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:160:31: error: statement with no effect [-Werror=unused-value]
+  160 |     for (long i = 0 ; i++ ; i < oldCapacity) {
+      |                             ~~^~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+f0b48e9
