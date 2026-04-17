@@ -354,3 +354,14 @@ Thu Apr 16 10:45:12 PM UTC 2026:
  tests:  15|2
 total_score: 40/60
 3410d24
+Fri Apr 17 12:47:10 AM UTC 2026: 
+ hashmap.c | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:160:31: error: statement with no effect [-Werror=unused-value]
+  160 |     for (long i = 0 ; i++ ; i < oldCapacity) {
+      |                             ~~^~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+e61bdac

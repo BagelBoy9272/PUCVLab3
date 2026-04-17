@@ -149,6 +149,19 @@ Pair * nextMap(HashMap * map) {
 void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
 
+    Pair ** oldArray = map->buckets;
+    long oldCapacity = map->capacity;
+
+    map->capacity *= 2;
+    map->size = 0;
+
+    map->buckets = (Pair **)calloc(map->capacity, sizeof(Pair *) * map->capacity);
+
+    for (long i = 0 ; i++ ; i < oldCapacity) {
+        if (oldArray[i] != NULL && oldArray[i]->key != NULL) {
+            insertMap(map, oldArray[i]->key, oldArray[i]->value);
+        }
+    }
 
 }
 
