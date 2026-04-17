@@ -129,7 +129,7 @@ Pair * nextMap(HashMap * map) {
     (map->current)++;
     
     for ( ; map->current < map->capacity ; map->current++) {
-        if (map->buckets[map->current] == NULL || map->buckets[map->current]->key == NULL) return map->buckets[map->current];     
+        if (map->buckets[map->current] != NULL && map->buckets[map->current]->key != NULL) return map->buckets[map->current];     
     }
     return NULL;
 }
