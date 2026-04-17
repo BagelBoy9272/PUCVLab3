@@ -443,3 +443,9 @@ hashmap.c:131:28: error: ‘oldCapacity’ undeclared (first use in this functio
       |                            ^~~~~~~~~~~
 hashmap.c:131:28: note: each undeclared identifier is reported only once for each function it appears in
 54de33f
+Fri Apr 17 01:10:47 AM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  14|1
+total_score: 50/60
+8a9a337
