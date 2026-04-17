@@ -386,3 +386,21 @@ Fri Apr 17 12:57:15 AM UTC 2026:
  tests:  14|1
 total_score: 50/60
 30b6a88
+Fri Apr 17 12:59:06 AM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:129:21: error: expected ‘;’ before ‘return’
+  129 |     (map->current)++
+      |                     ^
+      |                     ;
+  130 | 
+  131 |     return map->buckets[map->current];
+      |     ~~~~~~           
+hashmap.c:132:1: error: control reaches end of non-void function [-Werror=return-type]
+  132 | }
+      | ^
+cc1: all warnings being treated as errors
+2a6bcb0
