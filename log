@@ -432,3 +432,14 @@ hashmap.c:135:1: error: control reaches end of non-void function [-Werror=return
       | ^
 cc1: all warnings being treated as errors
 f2651b9
+Fri Apr 17 01:10:30 AM UTC 2026: 
+ hashmap.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:131:28: error: ‘oldCapacity’ undeclared (first use in this function)
+  131 |     for ( ; map->current < oldCapacity ; map->current++) {
+      |                            ^~~~~~~~~~~
+hashmap.c:131:28: note: each undeclared identifier is reported only once for each function it appears in
+54de33f

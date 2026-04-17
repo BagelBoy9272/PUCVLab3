@@ -128,10 +128,10 @@ Pair * firstMap(HashMap * map) {
 Pair * nextMap(HashMap * map) {
     (map->current)++;
     
-    while (map->buckets[map->current] == NULL || map->buckets[map->current]->key == NULL) {
-        (map->current)++;
+    for ( ; map->current < oldCapacity ; map->current++) {
+        if (map->buckets[map->current] == NULL || map->buckets[map->current]->key == NULL) return map->buckets[map->current];     
     }
-    
+    return NULL;
 }
 
 
@@ -162,7 +162,7 @@ void enlarge(HashMap * map) {
             insertMap(map, oldArray[i]->key, oldArray[i]->value);
         }
     }
-
+    free(oldArray);
 }
 
 
