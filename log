@@ -421,3 +421,14 @@ Fri Apr 17 01:04:14 AM UTC 2026:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 1cc760d
+Fri Apr 17 01:04:53 AM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:135:1: error: control reaches end of non-void function [-Werror=return-type]
+  135 | }
+      | ^
+cc1: all warnings being treated as errors
+f2651b9
